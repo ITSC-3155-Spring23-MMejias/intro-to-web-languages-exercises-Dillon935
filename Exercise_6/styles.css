@@ -1,0 +1,13 @@
+body{
+    background-color: darkgreen;
+}
+
+#main-title{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content{
+    margin-bottom: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <input type="text" id="txt-price" placeholder="Enter the price of the item"> <!--gathers user input and makes variables and initializes the inputs-->
+<input type="text" id="txt-quantity" placeholder="Enter the quanity of the item"><!--gathers user input-->
+<button id="btn-submit">Calculate</button> <!--creates a button-->
+<div id="output"></div> <!--output variable-->
+
+<script>
+  var priceInput = document.getElementById('txt-price');
+  var quantityInput = document.getElementById('txt-quantity');
+  var submitBtn = document.getElementById('btn-submit');
+  var output = document.getElementById('output');
+ <!--assigning variables-->
+
+  submitBtn.addEventListener('click', function () {
+    var price = priceInput.value;
+    var quanity = quantityInput.value;
+    price = +price;
+    quanity = +quanity;
+    if (Number.isNaN(price) || Number.isNaN(quanity)) { <!--checking if input is a number-->
+      output.innerHTML = 'Invalid input';
+      return;
+    }
+    var totalPrice = price * quanity; <!--calculating total with price x quantity-->
+    totalPrice = Math.round(totalPrice * 100) / 100; <!--rounding total price-->
+    output.innerHTML = quanity + ' items at $' + price + ' each is $' + totalPrice; <!--displaying output-->
+  });
+</script>
+    </body>
+</html>
